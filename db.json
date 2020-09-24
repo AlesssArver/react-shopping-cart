@@ -1,23 +1,29 @@
 {
   "goods": [
     {
-      "id": 1,
-      "name": "ADIDAS SOCKS",
-      "price": 800,
-      "quantity": 100
+      "name": "ADIDAS",
+      "price": "100",
+      "quantity": 100,
+      "id": 1
     },
     {
-      "id": 2,
       "name": "GUCCI SOCKS",
       "price": 1200,
-      "quantity": 50
+      "quantity": 50,
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "OFF-WHITE SOCKS",
-      "price": 1200,
-      "quantity": 50
-    }
+      "name": "OFF_WHITE SOCKS",
+      "price": 200,
+      "quantity": 50,
+      "id": 3
+    },
+    {
+      "name": "NIKE SOCKS",
+      "price": 100,
+      "quantity": 100,
+      "id": 4
+    },
   ],
   "cart": []
 }

@@ -9,7 +9,7 @@ import { Good, AddGood } from "../../components";
 type IProps = {
   goods: Array<IGood>;
   createGood: (name: string, price: string, quantity: string) => void;
-  incrementGood: (id: number, quantity: number) => void;
+  incrementGood: (good: IGood) => void;
   deletetGood: (id: number) => void;
   addToCard: (good: IGood) => void;
 };

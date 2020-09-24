@@ -40,7 +40,7 @@ type IMapStateToProps = {
 type IMapDispatchToProps = {
   getGoods: () => void;
   createGood: (name: string, price: string, quantity: string) => void;
-  incrementGood: (id: number, quantity: number) => void;
+  incrementGood: (good: IGood) => void;
   deletetGood: (id: number) => void;
   addToCard: (good: IGood) => void;
 };

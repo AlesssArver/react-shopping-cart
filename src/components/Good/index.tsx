@@ -11,7 +11,7 @@ type IProps = {
   name: string;
   price: number;
   quantity: number;
-  incrementGood: (id: number, quantity: number) => void;
+  incrementGood: (good: IGood) => void;
   deletetGood: (id: number) => void;
   addToCard: (good: IGood) => void;
 };
@@ -25,8 +25,10 @@ const Good: FC<IProps> = ({
   deletetGood,
   addToCard,
 }) => {
-  const onIncrement = () => incrementGood(id, quantity++);
-  const onDecrement = () => incrementGood(id, quantity--);
+  const onIncrement = () =>
+    incrementGood({ id, name, price, quantity: quantity += 1 });
+  const onDecrement = () =>
+    incrementGood({ id, name, price, quantity: quantity -= 1 });
 
   const onAddToCard = () => addToCard({ id, name, price, quantity });
 

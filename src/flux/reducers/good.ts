@@ -20,13 +20,19 @@ export default (state = initialState, action: IActions): IState => {
     case "GOOD/CREATE_GOOD":
       return {
         ...state,
-        goods: [...state.goods, action.good],
+        goods: [action.good, ...state.goods],
       };
     case "GOOD/INCREMENT_GOOD":
       return {
         ...state,
         goods: state.goods.map((g) => {
-          if (g.id === action.id) return { ...g, quantity: g.quantity };
+          if (g.id === action.good.id)
+            return {
+              ...g,
+              name: action.good.name,
+              price: action.good.price,
+              quantity: action.good.quantity,
+            };
           return g;
         }),
       };
@@ -55,13 +61,14 @@ export const createGood = (
   dispatch(action.createGood({ ...data }));
   messageSuccess("Good was added");
 };
-export const incrementGood = (id: number, quantity: number): T => async (
-  dispatch
-) => {
-  const data = await api.incrementGood(id, quantity);
-  console.log(data);
-  dispatch(action.incrementGood(id));
-  //   dispatch(action.getGoods(goods.json()));
+export const incrementGood = (good: IGood): T => async (dispatch) => {
+  const data = await api.incrementGood(
+    good.id,
+    good.name,
+    good.price,
+    good.quantity
+  );
+  dispatch(action.incrementGood(data));
 };
 export const deletetGood = (id: number): T => async (dispatch) => {
   await api.deleteGood(id);

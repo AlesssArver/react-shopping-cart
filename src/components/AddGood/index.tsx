@@ -74,7 +74,7 @@ const AddGood: FC<IProps> = ({ createGood }) => {
             </div>
             <div>
               <Button type="primary" htmlType="submit">
-                Login
+                Create
               </Button>
             </div>
           </form>

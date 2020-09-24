@@ -17,15 +17,24 @@ export type IGood = {
 
 export default {
   getGoods: () => {
-    return instance.get<Array<IGood>>(`/`).then((res) => res.data);
+    return instance
+      .get<Array<IGood>>(`?_sort=id&_order=desc`)
+      .then((res) => res.data);
   },
   createGood: (name: string, price: number, quantity: number) => {
     return instance
       .post(`/`, { name, price, quantity })
       .then((res) => res.data);
   },
-  incrementGood: (id: number, quantity: number) => {
-    return instance.put(`${id}`, { quantity }).then((res) => res.data);
+  incrementGood: (
+    id: number,
+    name: string,
+    price: number,
+    quantity: number
+  ) => {
+    return instance
+      .put(`${id}`, { name, price, quantity })
+      .then((res) => res.data);
   },
   deleteGood(id: number) {
     return instance.delete(`${id}`).then((res) => res.data);
