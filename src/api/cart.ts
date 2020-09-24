@@ -3,7 +3,7 @@ import axios from "axios";
 import { IGood } from "./good";
 
 export const instance = axios.create({
-  baseURL: "http://localhost:4000/cart/",
+  baseURL: "https://my-json-server.typicode.com/AlesssArver/react-shopping-cart/cart",
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",

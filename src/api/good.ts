@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const instance = axios.create({
-  baseURL: "http://localhost:4000/goods/",
+  baseURL: "https://my-json-server.typicode.com/AlesssArver/react-shopping-cart/goods",
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",

@@ -15,8 +15,10 @@ const Good: FC<IProps> = ({ id, name, price, quantity, deletetGood }) => {
 
   return (
     <Card title={name} actions={[<Button onClick={onDeleteGood}className="button--danger" key="delete">Delete</Button>]}>
-      <ul>{price}</ul>
-      <ul>{quantity}</ul>
+      <ul>
+        <li>price: {price}$</li>
+        <li>puantity: {quantity}</li>
+      </ul>
     </Card>
   );
 };
