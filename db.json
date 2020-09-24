@@ -1,0 +1,23 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "name": "ADIDAS SOCKS",
+      "price": 800,
+      "quantity": 100
+    },
+    {
+      "id": 2,
+      "name": "GUCCI SOCKS",
+      "price": 1200,
+      "quantity": 50
+    },
+    {
+      "id": 3,
+      "name": "OFF-WHITE SOCKS",
+      "price": 1200,
+      "quantity": 50
+    }
+  ],
+  "cart": []
+}
