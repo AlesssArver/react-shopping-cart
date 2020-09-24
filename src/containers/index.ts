@@ -1,2 +1,4 @@
+import { lazy } from 'react'
+
 export const CartContainer = lazy(() => import('./Cart'))
-export const GoodContainer = lazy(() => import('./Good'))
+export const GoodsContainer = lazy(() => import('./Good'))

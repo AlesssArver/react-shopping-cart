@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Suspense } from 'react'
 import { BrowserRouter, Redirect, Route, Switch, withRouter } from 'react-router-dom'
 
-import { CartContainer, GoodContainer } from "./containers";
+import { CartContainer, GoodsContainer } from "./containers";
 import NavbarContainer from "./containers/Navbar";
 
 const App = () => {
